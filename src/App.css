@@ -1,0 +1,36 @@
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+main {
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+.my-button
+    {
+        
+        display:inline-flex;
+        position: center;
+        font-size: 1rem;
+        background: #FFEFBA;
+        border: 2px solid black;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 0.75rem 1.25rem;
+      }
+.my-button:hover{
+    background: #5D26C1;
+    color: #ffffff;
+}
+Button{
+    font-size:1rem;
+    border:2px solid black;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
