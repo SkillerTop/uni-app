@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components"
+    "\\src\\components",
+    "\\src\\hooks"
   ],
-  "SelectedNode": "\\src\\components\\ProductDetails.js",
+  "SelectedNode": "\\src\\hooks\\UseConsoleLog.js",
   "PreviewInSolutionExplorer": false
 }

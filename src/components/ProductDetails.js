@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import useStatus from '../hooks/useStatus';
+import useConsoleLog from '../hooks/useConsoleLog';
 
 function ProductDetails({ product, onCommentSubmit }) {
     const [comment, setComment] = useState('');
+    const [status, updateStatus] = useStatus('');
 
     const handleCommentChange = (e) => {
         setComment(e.target.value);
@@ -11,7 +14,10 @@ function ProductDetails({ product, onCommentSubmit }) {
         e.preventDefault();
         onCommentSubmit(product.id, comment);
         setComment('');
+        updateStatus('Коментар відправлено!');
     };
+
+    useConsoleLog(status);
 
     return (
         <div>

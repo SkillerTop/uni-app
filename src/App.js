@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Menu from './components/Menu';
 import ProductItem from './components/ProductItem';
 import ProductDetails from './components/ProductDetails';
+import useStatus from './hooks/useStatus';
+import useConsoleLog from './hooks/useConsoleLog';
 
 function App() {
     const handleClick = () => {
@@ -13,6 +15,7 @@ function App() {
     };
 
     const [selectedProducts, setSelectedProducts] = useState([]);
+    const [status, updateStatus] = useStatus('');
 
     const products = [
         { id: 1, name: 'Товар 1' },
@@ -29,8 +32,12 @@ function App() {
     };
 
     const handleCommentSubmit = (productId, comment) => {
-        console.log(`Коментар до товару ${productId}: ${comment}`);
+        const newStatus = `Коментар до товару ${productId}: ${comment}`;
+        updateStatus(newStatus);
+        console.log(newStatus);
     };
+
+    useConsoleLog(status);
 
     return (
         <div className="header-div">
